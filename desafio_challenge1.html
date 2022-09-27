@@ -1,0 +1,101 @@
+<html>
+
+<body>
+    <header>
+        <img src="imagenes/logoalura.png" alt="Logo de alura con la inicial da letra a">
+    </header>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="desafio_challenge1.css">
+        <title>Encriptador</title>
+    </head>
+    <meta charset="UTF-8">
+
+
+    <div class="cuadros">
+        <h1 class="titulo">ENCRIPTA TEXTO</h1>
+        <textarea class="text" name="textoNormal" cols="50" rows="20"></textarea>
+        <textarea class="encript" name="textoEncriptado" cols="30" rows="20"></textarea>
+        <br>
+    </div>
+
+
+    <button class="btnEncr" onclick="encriptar()">Encriptar</button>
+    <button class="btnDes" onclick="desencriptar()">Desencriptar</button>
+    <button class="copy" onclick="copiar()">Copiar</button>
+</body>
+
+<script>
+
+    function encriptar() {
+        var texto = document.querySelector('textarea[name="textoNormal"]');
+        texto.focus();
+        var textoaCopiar = document.querySelector('textarea[name="textoEncriptado"]');
+        var textoEncriptado = "";
+        var encriptado = texto.value.split("");
+        for (var j = 0; j < encriptado.length; j++) {
+
+            if (encriptado[j] == "e") {
+                textoEncriptado += "enter";
+            } else if (encriptado[j] == "i") {
+                textoEncriptado += "imes";
+            } else if (encriptado[j] == "a") {
+                textoEncriptado += "ai";
+            } else if (encriptado[j] == "o") {
+                textoEncriptado += "ober";
+            } else if (encriptado[j] == "u") {
+                textoEncriptado += "ufat";
+            } else {
+                textoEncriptado += encriptado[j];
+            }
+
+        }
+        textoaCopiar.value = textoEncriptado;
+        texto.value = "";
+        textoaCopiar.focus();
+        textoaCopiar.style.backgroundImage = "none";
+    }
+    function desencriptar() {
+        var texto = document.querySelector('textarea[name="textoNormal"]');
+        var textoaCopiar = document.querySelector('textarea[name="textoEncriptado"]');
+        var encriptado = texto.value;
+        if (encriptado.includes("enter")) {
+            encriptado = encriptado.replaceAll("enter", "e");
+        }
+        if (encriptado.includes("imes")) {
+            encriptado = encriptado.replaceAll("imes", "i");
+        }
+        if (encriptado.includes("ai")) {
+            encriptado = encriptado.replaceAll("ai", "a");
+        }
+        if (encriptado.includes("ober")) {
+            encriptado = encriptado.replaceAll("ober", "o");
+        }
+        if (encriptado.includes("ufat")) {
+            encriptado = encriptado.replaceAll("ufat", "u");
+        }
+        textoaCopiar.value = encriptado;
+        texto.value = "";
+    }
+
+    function copiar() {
+        var textoaCopiar = document.querySelector('textarea[name="textoEncriptado"]');
+        textoaCopiar.select();
+        navigator.clipboard.writeText(textoaCopiar.value)
+        textoaCopiar.value = "";
+        alert("Texto Copiado")
+    }
+
+</script>
+<div>
+    <h1 class="info">Solo letras minusculas y sin acentos
+
+    </h1>
+</div>
+
+
+
+</html>

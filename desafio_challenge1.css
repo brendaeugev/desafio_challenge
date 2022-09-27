@@ -1,0 +1,72 @@
+.titulo{
+    margin-left: 50px;
+    color: #0a3871;
+}
+.info{
+    margin-left: 50px;
+    color: #0a3871;
+}
+
+.encript {
+    background-color: #e0fcfa;
+    margin-left: 188px;
+    background-image: url("candado.png");
+    background-repeat: no-repeat;
+    background-position: 65px;
+    background-size: 110px;
+}
+.copy{
+    margin-left: 170px;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    background-color: #daebf5;
+    min-width: 195px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.4em 0;
+}
+.btnDes{
+    margin-left: 55px;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    background-color: #daebf5;
+    min-width: 195px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.4em 0;
+}
+.btnEncr{
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    background-color: #daebf5;
+    min-width: 195px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.4em 0;
+}
+.cuadros{
+    margin-top: 50px;
+}
+.text{
+     margin-left: 50px;
+     background-color: #e0fcfa;
+}
+body{
+    background-color: rgb(168 219 226);
+}
